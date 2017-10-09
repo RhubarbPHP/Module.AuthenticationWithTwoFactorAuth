@@ -1,0 +1,34 @@
+{
+  "name": "rhubarbphp/module-authentication-with-two-factor-auth",
+  "description": "Provides two factor authentication",
+  "keywords": [
+    "authentication",
+    "rhubarb",
+    "php",
+    "framework"
+  ],
+  "homepage": "http://www.rhubarbphp.com/",
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "Rhubarb\\AuthenticationWithTwoFactorAuth\\": "src/",
+      "Rhubarb\\AuthenticationWithTwoFactorAuth\\Tests\\": "tests/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:RhubarbPHP/Module.AwsSnsSmsProvider.git"
+    }
+  ],
+  "require": {
+    "rhubarbphp/module-aws-sns-sms-provider": "dev-master as 1.0",
+    "rhubarbphp/scaffold-authentication-with-roles": "^1.0",
+    "rhubarbphp/rhubarb": "dev-feature/SMSSendable as 1.3.9",
+    "spomky-labs/otphp": "^9.0",
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.*"
+  }
+}
