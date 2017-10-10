@@ -4,35 +4,39 @@ namespace Rhubarb\AuthenticationWithTwoFactorAuth\Login;
 
 use Rhubarb\Leaf\Controls\Common\Buttons\Button;
 use Rhubarb\Leaf\Controls\Common\Text\TextBox;
-use Rhubarb\Scaffolds\Authentication\Leaves\LoginView;
+use Rhubarb\Leaf\Views\View;
 
-class TwoFactorAuthView extends LoginView
+class TwoFactorAuthView extends View
 {
+    /** @var TwoFactorAuthModel */
+    protected $model;
+
     public function createSubLeaves()
     {
         parent::createSubLeaves();
 
         $this->registerSubLeaf(
-            new TextBox('AuthCode'),
-            new Button('Confirm', 'Confirm')
+            new TextBox('verificationCode'),
+            new Button('Confirm', 'Confirm', function() {
+                $this->model->twoFactorConfirmEvent->raise();
+            })
         );
     }
 
     public function printViewContent()
     {
-        if ($this->model->failed) {
-            print '<div class="c-alert c-alert--error">Sorry, that code does not match the one we provided</div>';
-        }
-
         ?>
+        <div class="c-alert">A text message with a 6-digit verification code was just sent to your phone. Please enter
+            the code below.
+        </div>
         <fieldset class="c-form c-form--inline">
             <div class="c-form__group">
-                <label class="c-form__label">Authorization Code</label>
-                <?= $this->leaves["AuthCode"]; ?>
+                <label class="c-form__label">Verification Code</label>
+                <?= $this->leaves['verificationCode']; ?>
             </div>
 
             <div class="c-form__actions">
-                <?= $this->leaves["Confirm"]; ?>
+                <?= $this->leaves['Confirm']; ?>
             </div>
         </fieldset>
 
