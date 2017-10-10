@@ -5,6 +5,7 @@ namespace Rhubarb\AuthenticationWithTwoFactorAuth;
 use Rhubarb\AuthenticationWithTwoFactorAuth\Login\TwoFactorLogin;
 use Rhubarb\Scaffolds\Authentication\Settings\ProtectedUrl;
 use Rhubarb\Scaffolds\AuthenticationWithRoles\AuthenticationWithRolesModule;
+use Rhubarb\Stem\Schema\SolutionSchema;
 
 class AuthenticationWithTwoFactorAuthModule extends AuthenticationWithRolesModule
 {
@@ -20,5 +21,10 @@ class AuthenticationWithTwoFactorAuthModule extends AuthenticationWithRolesModul
             $protected->loginLeafClassName = TwoFactorLogin::class;
             $this->registerProtectedUrl($protected);
         }
+    }
+
+    public function initialise()
+    {
+        SolutionSchema::registerSchema('Authentication', DatabaseSchema::class);
     }
 }
