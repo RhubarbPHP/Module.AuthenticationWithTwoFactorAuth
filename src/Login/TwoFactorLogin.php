@@ -2,10 +2,10 @@
 
 namespace Rhubarb\AuthenticationWithTwoFactorAuth\Login;
 
-use Rhubarb\AuthenticationWithTwoFactorAuth\LoginProviders\TwoFactorLoginProvider;
 use Rhubarb\Crown\Exceptions\ForceResponseException;
 use Rhubarb\Crown\LoginProviders\Exceptions\LoginDisabledException;
 use Rhubarb\Crown\LoginProviders\Exceptions\LoginFailedException;
+use Rhubarb\Crown\LoginProviders\LoginProvider;
 use Rhubarb\Crown\Request\Request;
 use Rhubarb\Crown\Request\WebRequest;
 use Rhubarb\Crown\Response\RedirectResponse;
@@ -24,7 +24,7 @@ class TwoFactorLogin extends Login
         }
 
         $this->model->attemptLoginEvent->attachHandler(function () {
-            $login = TwoFactorLoginProvider::singleton();
+            $login = LoginProvider::getProvider();
 
             try {
                 if ($login->login($this->model->username, $this->model->password)) {
