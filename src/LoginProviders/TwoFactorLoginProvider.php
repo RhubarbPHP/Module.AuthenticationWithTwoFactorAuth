@@ -2,53 +2,79 @@
 
 namespace Rhubarb\AuthenticationWithTwoFactorAuth\LoginProviders;
 
-use Aws\Sms\SmsClient;
 use OTPHP\TOTP;
-use Rhubarb\AuthenticationWithTwoFactorAuth\User;
-use Rhubarb\AwsSnsSmsProvider\SMSProviders\AwsSnsSmsProvider;
-use Rhubarb\Crown\Sendables\SendableProvider;
 use Rhubarb\Crown\Sendables\SMS\SMS;
 use Rhubarb\Scaffolds\Authentication\LoginProviders\LoginProvider;
 
 class TwoFactorLoginProvider extends LoginProvider
 {
-    /** @var User */
-    private $user;
+    private static $skip2Factor;
+    /**
+     * @var
+     * @deprecated remove once we're sending the codes!
+     */
+    public $verificationCode;
+    public $timestamp;
+    public $twoFactorVerified = false;
 
-    /** @var TOTP */
-    private $totp;
-
-    public function isLoggedIn()
+    public function isTwoFactorVerified(): bool
     {
-        // if on 2 factor page, then don't add a check for token was validated, otherwise, do
+        return $this->twoFactorVerified;
+    }
 
+    public function hasProvidedCorrectUserCredentials(): bool
+    {
         return parent::isLoggedIn();
     }
 
-    public function validateTwoFactorInput($input)
+    public function isLoggedIn()
     {
-        // set token validated true
-        if ($this->totp->verify($input)) {
-            $this->loggedIn = true;
-            $this->loggedInUserIdentifier = $this->user->getUniqueIdentifier();
-        } else {
-            $this->loggedIn = false;
+        return (self::$skip2Factor || $this->isTwoFactorVerified()) && $this->hasProvidedCorrectUserCredentials();
+    }
+
+    public function validateCode($code)
+    {
+        if ($this->createTOTPHelper()->verify($code, $this->timestamp)) {
+            $this->twoFactorVerified = true;
+            $this->storeSession();
         }
+    }
+
+    protected function onLogOut()
+    {
+        $this->twoFactorVerified = false;
         $this->storeSession();
+        parent::onLogOut();
     }
 
-    public function hasValidToken()
+    protected function createTOTPHelper(): TOTP
     {
-        // check session for valid token $this->data
+        return TOTP::create($this->getLoggedInUser()->TFASecret, 30, 'sha256');
     }
 
-    public function sendTotpCode()
+    public function createAndSendCode()
     {
-        $this->user = $this->getLoggedInUser();
-        $this->totp = TOTP::create($this->user->TFASecret, 30, 'sha256');
+        $this->timestamp = time();
+        $code = $this->createTOTPHelper()->at($this->timestamp);
+        $this->verificationCode = $code;
+        $this->storeSession();
+
+        $this->sendCode($code);
+    }
+
+    protected function sendCode(string $code)
+    {
         $sms = new SMS();
-        $sms->setText('Your verification code is: ' . $this->totp->now());
-        $sms->addRecipientByNumber($this->user->MobileNumber);
-        SendableProvider::selectProviderAndSend($sms);
+        $sms->setText('Your verification code is: ' . $code);
+        $sms->addRecipientByNumber($this->getLoggedInUser()->MobileNumber);
+        //SendableProvider::selectProviderAndSend($sms);
+    }
+
+    public static function getLoggedInUser()
+    {
+        self::$skip2Factor = true;
+        $user = parent::getLoggedInUser();
+        self::$skip2Factor = false;
+        return $user;
     }
 }

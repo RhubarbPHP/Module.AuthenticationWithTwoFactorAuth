@@ -3,51 +3,54 @@
 namespace Rhubarb\AuthenticationWithTwoFactorAuth\Login;
 
 use Rhubarb\AuthenticationWithTwoFactorAuth\LoginProviders\TwoFactorLoginProvider;
-use Rhubarb\Crown\Exceptions\ForceResponseException;
-use Rhubarb\Crown\LoginProviders\Exceptions\LoginDisabledException;
-use Rhubarb\Crown\LoginProviders\Exceptions\LoginFailedException;
-use Rhubarb\Crown\LoginProviders\LoginProvider;
-use Rhubarb\Crown\Request\Request;
-use Rhubarb\Crown\Request\WebRequest;
-use Rhubarb\Crown\Response\RedirectResponse;
+use Rhubarb\Crown\Events\Event;
 use Rhubarb\Scaffolds\Authentication\Leaves\Login;
 
+/**
+ * Class TwoFactorLogin
+ * @package Rhubarb\AuthenticationWithTwoFactorAuth\Login
+ * @property TwoFactorLoginModel $model
+ */
 class TwoFactorLogin extends Login
 {
+    protected $codePrompt = false;
+
+    protected function createModel()
+    {
+        return new TwoFactorLoginModel();
+    }
+
     protected function onModelCreated()
     {
-        /** @var WebRequest $request */
-        $request = Request::current();
-        $redirectUrl = $request->get('rd');
-        if ($redirectUrl) {
-            $redirectUrl = urldecode($redirectUrl);
-            $this->model->redirectUrl = $redirectUrl;
-        }
-
-        $this->model->attemptLoginEvent->attachHandler(function () {
-            $login = TwoFactorLoginProvider::singleton();
-
-            try {
-                if ($login->login($this->model->username, $this->model->password)) {
-
-                    if ($this->model->rememberMe) {
-                        $login->rememberLogin();
-                    }
-
-                    $login->sendTotpCode();
-                    $this->onSuccess();
-                }
-            } catch (LoginDisabledException $er) {
-                $this->model->disabled = true;
-                $this->model->failed = true;
-            } catch (LoginFailedException $er) {
-                $this->model->failed = true;
-            }
+        parent::onModelCreated();
+        $this->model->loginProvider = TwoFactorLoginProvider::class;
+        $this->model->verifyCodeEvent = new Event();
+        $this->model->verifyCodeEvent->attachHandler(function () {
+            /** @var TwoFactorLoginProvider $loginProviderClass */
+            $loginProvider = TwoFactorLoginProvider::singleton();
+            $loginProvider->validateCode($this->model->Code);
+            $this->onSuccess();
         });
+    }
+
+
+    protected function getViewClass()
+    {
+        return TwoFactorLoginView::class;
     }
 
     protected function onSuccess()
     {
-        throw new ForceResponseException(new RedirectResponse('twoFactorAuth/'));
+        /** @var TwoFactorLoginProvider $loginProviderClass */
+        $loginProviderClass = $this->loginProviderClassName;
+        $loginProvider = $loginProviderClass::singleton();
+        if (!$loginProvider->isTwoFactorVerified()) {
+            $loginProvider->createAndSendCode();
+            $this->model->promptForCode = true;
+            return clone $this;
+            // rerender with code input view
+        } else {
+            parent::onSuccess();
+        }
     }
 }
