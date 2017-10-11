@@ -16,6 +16,7 @@ class TwoFactorLoginProvider extends LoginProvider
     public $verificationCode;
     public $timestamp;
     public $twoFactorVerified = false;
+    public $codeSent;
 
     public function isTwoFactorVerified(): bool
     {
@@ -57,9 +58,10 @@ class TwoFactorLoginProvider extends LoginProvider
         $this->timestamp = time();
         $code = $this->createTOTPHelper()->at($this->timestamp);
         $this->verificationCode = $code;
-        $this->storeSession();
 
         $this->sendCode($code);
+        $this->codeSent = true;
+        $this->storeSession();
     }
 
     protected function sendCode(string $code)

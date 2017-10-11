@@ -12,4 +12,5 @@ class TwoFactorLoginModel extends LoginModel
     public $Code;
     public $loginProvider;
     public $promptForCode;
+    public $codeNotValid = false;
 }

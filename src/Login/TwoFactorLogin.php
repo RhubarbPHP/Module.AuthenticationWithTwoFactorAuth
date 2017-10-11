@@ -45,10 +45,12 @@ class TwoFactorLogin extends Login
         $loginProviderClass = $this->loginProviderClassName;
         $loginProvider = $loginProviderClass::singleton();
         if (!$loginProvider->isTwoFactorVerified()) {
-            $loginProvider->createAndSendCode();
+            if(!$loginProvider->codeSent) {
+                $loginProvider->createAndSendCode();
+            }
+            $this->model->codeNotValid = true;
             $this->model->promptForCode = true;
             return clone $this;
-            // rerender with code input view
         } else {
             parent::onSuccess();
         }
