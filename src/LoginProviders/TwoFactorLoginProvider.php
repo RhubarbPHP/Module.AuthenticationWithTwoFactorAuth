@@ -6,6 +6,8 @@ use Aws\Sms\SmsClient;
 use OTPHP\TOTP;
 use Rhubarb\AuthenticationWithTwoFactorAuth\User;
 use Rhubarb\AwsSnsSmsProvider\SMSProviders\AwsSnsSmsProvider;
+use Rhubarb\Crown\Sendables\SendableProvider;
+use Rhubarb\Crown\Sendables\SMS\SMS;
 use Rhubarb\Scaffolds\Authentication\LoginProviders\LoginProvider;
 
 class TwoFactorLoginProvider extends LoginProvider
@@ -18,10 +20,6 @@ class TwoFactorLoginProvider extends LoginProvider
 
     public function isLoggedIn()
     {
-        if (parent::isLoggedIn()) {
-            $this->user = $this->getLoggedInUser();
-        }
-
         // if on 2 factor page, then don't add a check for token was validated, otherwise, do
 
         return parent::isLoggedIn();
@@ -46,8 +44,11 @@ class TwoFactorLoginProvider extends LoginProvider
 
     public function sendTotpCode()
     {
+        $this->user = $this->getLoggedInUser();
         $this->totp = TOTP::create($this->user->TFASecret, 30, 'sha256');
-        $sms = new AwsSnsSmsProvider();
-        $sms->send();
+        $sms = new SMS();
+        $sms->setText('Your verification code is: ' . $this->totp->now());
+        $sms->addRecipientByNumber($this->user->MobileNumber);
+        SendableProvider::selectProviderAndSend($sms);
     }
 }

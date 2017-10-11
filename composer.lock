@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.36.23",
+            "version": "3.36.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "755ff10ad2ea4ebb04b4e2b150a4a4fb13a22060"
+                "reference": "aa3d8ca598c40f0cc03245d92fa8ac727410e47b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/755ff10ad2ea4ebb04b4e2b150a4a4fb13a22060",
-                "reference": "755ff10ad2ea4ebb04b4e2b150a4a4fb13a22060",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/aa3d8ca598c40f0cc03245d92fa8ac727410e47b",
+                "reference": "aa3d8ca598c40f0cc03245d92fa8ac727410e47b",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-10-06 22:26:58"
+            "time": "2017-10-10 17:49:15"
         },
         {
             "name": "beberlei/assert",
@@ -924,12 +924,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Rhubarb.git",
-                "reference": "21e43fec158dbea068634052c3765638858009c9"
+                "reference": "7bc74c81af768cd4c2896bd936b4f0afa4c57ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Rhubarb/zipball/21e43fec158dbea068634052c3765638858009c9",
-                "reference": "21e43fec158dbea068634052c3765638858009c9",
+                "url": "https://api.github.com/repos/RhubarbPHP/Rhubarb/zipball/7bc74c81af768cd4c2896bd936b4f0afa4c57ef0",
+                "reference": "7bc74c81af768cd4c2896bd936b4f0afa4c57ef0",
                 "shasum": ""
             },
             "require": {
@@ -964,7 +964,7 @@
                 "framework",
                 "php"
             ],
-            "time": "2017-09-29 15:16:45"
+            "time": "2017-10-10 16:30:13"
         },
         {
             "name": "rhubarbphp/scaffold-authentication",
