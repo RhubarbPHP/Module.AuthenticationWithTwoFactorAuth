@@ -16,7 +16,8 @@ class TwoFactorLoginProvider extends LoginProvider
     public $verificationCode;
     public $timestamp;
     public $twoFactorVerified = false;
-    public $codeSent;
+    public $codeSent = false;
+    public $codeAttempted = false;
 
     public function isTwoFactorVerified(): bool
     {
@@ -37,13 +38,18 @@ class TwoFactorLoginProvider extends LoginProvider
     {
         if ($this->createTOTPHelper()->verify($code, $this->timestamp)) {
             $this->twoFactorVerified = true;
-            $this->storeSession();
+        } else {
+            $this->codeAttempted = true;
         }
+
+        $this->storeSession();
     }
 
     protected function onLogOut()
     {
         $this->twoFactorVerified = false;
+        $this->codeSent = false;
+        $this->codeAttempted = false;
         $this->storeSession();
         parent::onLogOut();
     }

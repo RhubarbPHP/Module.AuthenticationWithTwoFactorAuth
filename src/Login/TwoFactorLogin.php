@@ -48,7 +48,6 @@ class TwoFactorLogin extends Login
             if(!$loginProvider->codeSent) {
                 $loginProvider->createAndSendCode();
             }
-            $this->model->codeNotValid = true;
             $this->model->promptForCode = true;
             return clone $this;
         } else {

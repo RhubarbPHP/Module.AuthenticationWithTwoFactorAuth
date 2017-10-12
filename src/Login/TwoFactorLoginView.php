@@ -33,7 +33,7 @@ class TwoFactorLoginView extends LoginView
             $loginProviderClass = $this->model->loginProvider;
             $loginProvider = $loginProviderClass::singleton();
 
-            if($this->model->codeNotValid) {
+            if ($loginProvider->codeAttempted && !$loginProvider->isTwoFactorVerified()) {
                 print '<div class="c-alert c-alert--error">Sorry, this code does not match the one we sent you, please check and try again.</div>';
             }
 
