@@ -3,8 +3,8 @@
 namespace Rhubarb\AuthenticationWithTwoFactorAuth\LoginProviders;
 
 use OTPHP\TOTP;
-use Rhubarb\Crown\Sendables\SMS\SMS;
 use Rhubarb\Scaffolds\Authentication\LoginProviders\LoginProvider;
+use Rhubarb\Sms\Sendables\Sms\SimpleSms;
 
 class TwoFactorLoginProvider extends LoginProvider
 {
@@ -72,7 +72,7 @@ class TwoFactorLoginProvider extends LoginProvider
 
     protected function sendCode(string $code)
     {
-        $sms = new SMS();
+        $sms = new SimpleSms();
         $sms->setText('Your verification code is: ' . $code);
         $sms->addRecipientByNumber($this->getLoggedInUser()->MobileNumber);
         //SendableProvider::selectProviderAndSend($sms);

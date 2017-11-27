@@ -24,7 +24,7 @@
   "require": {
     "rhubarbphp/module-aws-sns-sms-provider": "dev-master as 1.0",
     "rhubarbphp/scaffold-authentication-with-roles": "^1.0",
-    "rhubarbphp/rhubarb": "dev-feature/SMSSendable as 1.3.9",
+    "rhubarbphp/rhubarb": "^1.4.0",
     "spomky-labs/otphp": "^9.0",
     "php": "^7.0"
   },

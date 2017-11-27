@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0534417d99be2da18383d82f52aa22d4",
-    "content-hash": "36458a6b501ba88efdab00154592f51d",
+    "content-hash": "f3d153b8cf2ff1ed034c8726ab95f0b1",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.36.24",
+            "version": "3.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "aa3d8ca598c40f0cc03245d92fa8ac727410e47b"
+                "reference": "04a19849652687e8c535217d0af4de6203107979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/aa3d8ca598c40f0cc03245d92fa8ac727410e47b",
-                "reference": "aa3d8ca598c40f0cc03245d92fa8ac727410e47b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/04a19849652687e8c535217d0af4de6203107979",
+                "reference": "04a19849652687e8c535217d0af4de6203107979",
                 "shasum": ""
             },
             "require": {
@@ -85,20 +84,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-10-10 17:49:15"
+            "time": "2017-11-27T09:20:45+00:00"
         },
         {
             "name": "beberlei/assert",
-            "version": "v2.7.6",
+            "version": "v2.7.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/assert.git",
-                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563"
+                "reference": "53991547d6f0b8c81354fb2d098dcb71e81678cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/8726e183ebbb0169cb6cb4832e22ebd355524563",
-                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/53991547d6f0b8c81354fb2d098dcb71e81678cb",
+                "reference": "53991547d6f0b8c81354fb2d098dcb71e81678cb",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +106,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.1.1",
-                "phpunit/phpunit": "^4|^5"
+                "phpunit/phpunit": "^4.8.35|^5.7"
             },
             "type": "library",
             "autoload": {
@@ -140,7 +139,7 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-05-04 02:00:24"
+            "time": "2017-11-13T18:35:09+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -183,7 +182,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2016-07-18 04:51:16"
+            "time": "2016-07-18T04:51:16+00:00"
         },
         {
             "name": "gcdtech/rhubarb-module-aws",
@@ -213,7 +212,7 @@
             "license": [
                 "proprietary"
             ],
-            "time": "2017-02-01 22:00:18"
+            "time": "2017-02-01T22:00:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -278,7 +277,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22 18:50:49"
+            "time": "2017-06-22T18:50:49+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -329,7 +328,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20 10:07:11"
+            "time": "2016-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -394,7 +393,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20 17:10:46"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -449,7 +448,7 @@
                 "json",
                 "jsonpath"
             ],
-            "time": "2016-12-03 22:08:25"
+            "time": "2016-12-03T22:08:25+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -511,7 +510,7 @@
                 "hex2bin",
                 "rfc4648"
             ],
-            "time": "2017-09-22 14:55:37"
+            "time": "2017-09-22T14:55:37+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -560,7 +559,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2016-01-25 08:17:30"
+            "time": "2016-01-25T08:17:30+00:00"
         },
         {
             "name": "psr/http-message",
@@ -610,7 +609,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -657,7 +656,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "rhubarbphp/custard",
@@ -703,7 +702,7 @@
                 "rhubarb",
                 "tools"
             ],
-            "time": "2017-01-09 16:06:24"
+            "time": "2017-01-09T16:06:24+00:00"
         },
         {
             "name": "rhubarbphp/module-aws-sns-sms-provider",
@@ -711,17 +710,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Module.AwsSnsSmsProvider.git",
-                "reference": "ae8294055fea31f77b0625101c0be12b27f1a57d"
+                "reference": "861dc473b4394d22a3f65213668ab88510b8ee0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Module.AwsSnsSmsProvider/zipball/ae8294055fea31f77b0625101c0be12b27f1a57d",
-                "reference": "ae8294055fea31f77b0625101c0be12b27f1a57d",
+                "url": "https://api.github.com/repos/RhubarbPHP/Module.AwsSnsSmsProvider/zipball/861dc473b4394d22a3f65213668ab88510b8ee0b",
+                "reference": "861dc473b4394d22a3f65213668ab88510b8ee0b",
                 "shasum": ""
             },
             "require": {
                 "gcdtech/rhubarb-module-aws": "^1.0",
-                "rhubarbphp/rhubarb": "dev-feature/SMSSendable as 1.3.9"
+                "rhubarbphp/module-sms": "^1.0.1",
+                "rhubarbphp/rhubarb": "^1.4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "3.*"
@@ -750,7 +750,52 @@
                 "source": "https://github.com/RhubarbPHP/Module.AwsSnsSmsProvider/tree/master",
                 "issues": "https://github.com/RhubarbPHP/Module.AwsSnsSmsProvider/issues"
             },
-            "time": "2017-10-05 16:29:45"
+            "time": "2017-11-27T10:38:23+00:00"
+        },
+        {
+            "name": "rhubarbphp/module-csrfprotection",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RhubarbPHP/Module.CsrfProtection.git",
+                "reference": "c622ae764f60c42403cc6eb2adc0ae09449bc341"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RhubarbPHP/Module.CsrfProtection/zipball/c622ae764f60c42403cc6eb2adc0ae09449bc341",
+                "reference": "c622ae764f60c42403cc6eb2adc0ae09449bc341",
+                "shasum": ""
+            },
+            "require": {
+                "rhubarbphp/rhubarb": "^1.3.18"
+            },
+            "require-dev": {
+                "codeception/codeception": "^2.0.0",
+                "codeception/specify": "^0.4.6",
+                "codeception/verify": "^0.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rhubarb\\Csrf\\": "src/",
+                    "Rhubarb\\Csrf\\Tests\\": "tests/unit/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "A means to provide token based CSRF protection",
+            "homepage": "http://www.rhubarbphp.com/",
+            "keywords": [
+                "csrf",
+                "framework",
+                "php",
+                "protection",
+                "rhubarb",
+                "token"
+            ],
+            "time": "2017-11-20T10:36:53+00:00"
         },
         {
             "name": "rhubarbphp/module-jsvalidation",
@@ -772,24 +817,25 @@
                 "Apache 2.0"
             ],
             "description": "Provides javascript validation patterns for HTML forms",
-            "time": "2017-08-17 14:34:15"
+            "time": "2017-08-17T14:34:15+00:00"
         },
         {
             "name": "rhubarbphp/module-leaf",
-            "version": "1.3.11",
+            "version": "1.3.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Module.Leaf.git",
-                "reference": "9c0f96b4771da070107b739d9355dd70a0acd84e"
+                "reference": "faa8c511a08c7358bf593ff54f63a0fdb42d8f7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Module.Leaf/zipball/9c0f96b4771da070107b739d9355dd70a0acd84e",
-                "reference": "9c0f96b4771da070107b739d9355dd70a0acd84e",
+                "url": "https://api.github.com/repos/RhubarbPHP/Module.Leaf/zipball/faa8c511a08c7358bf593ff54f63a0fdb42d8f7b",
+                "reference": "faa8c511a08c7358bf593ff54f63a0fdb42d8f7b",
                 "shasum": ""
             },
             "require": {
                 "rhubarbphp/custard": "^1.0.9",
+                "rhubarbphp/module-csrfprotection": "^1.0.0",
                 "rhubarbphp/module-jsvalidation": "^1.0.0",
                 "rhubarbphp/rhubarb": "^1.1.0"
             },
@@ -825,7 +871,7 @@
                 "presenter",
                 "rhubarb"
             ],
-            "time": "2017-09-05 11:47:32"
+            "time": "2017-11-23T22:44:33+00:00"
         },
         {
             "name": "rhubarbphp/module-leaf-common-controls",
@@ -864,20 +910,61 @@
                 "presenter",
                 "rhubarb"
             ],
-            "time": "2017-09-05 11:48:57"
+            "time": "2017-09-05T11:48:57+00:00"
         },
         {
-            "name": "rhubarbphp/module-stem",
-            "version": "1.3.31",
+            "name": "rhubarbphp/module-sms",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RhubarbPHP/Module.Stem.git",
-                "reference": "8dd9565ff0db866485cdee322963691851fd53db"
+                "url": "https://github.com/RhubarbPHP/Module.Sms.git",
+                "reference": "883e143a9bc5b321f1400f23a81b45825081a699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Module.Stem/zipball/8dd9565ff0db866485cdee322963691851fd53db",
-                "reference": "8dd9565ff0db866485cdee322963691851fd53db",
+                "url": "https://api.github.com/repos/RhubarbPHP/Module.Sms/zipball/883e143a9bc5b321f1400f23a81b45825081a699",
+                "reference": "883e143a9bc5b321f1400f23a81b45825081a699",
+                "shasum": ""
+            },
+            "require": {
+                "rhubarbphp/rhubarb": "^1.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rhubarb\\Sms\\": "src/",
+                    "Rhubarb\\Sms\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "A Sms module for Rhubarb",
+            "homepage": "http://www.rhubarbphp.com/",
+            "keywords": [
+                "framework",
+                "php",
+                "rhubarb",
+                "sms"
+            ],
+            "time": "2017-11-27T09:59:34+00:00"
+        },
+        {
+            "name": "rhubarbphp/module-stem",
+            "version": "1.5.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RhubarbPHP/Module.Stem.git",
+                "reference": "c3fd8531a7bc896bb08a7c2af3ef9e611f54f8e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RhubarbPHP/Module.Stem/zipball/c3fd8531a7bc896bb08a7c2af3ef9e611f54f8e3",
+                "reference": "c3fd8531a7bc896bb08a7c2af3ef9e611f54f8e3",
                 "shasum": ""
             },
             "require": {
@@ -916,20 +1003,20 @@
                 "orm",
                 "php"
             ],
-            "time": "2017-09-22 10:57:49"
+            "time": "2017-11-24T12:41:53+00:00"
         },
         {
             "name": "rhubarbphp/rhubarb",
-            "version": "dev-feature/SMSSendable",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Rhubarb.git",
-                "reference": "7bc74c81af768cd4c2896bd936b4f0afa4c57ef0"
+                "reference": "30d5b5dd6da27abe58b827806d4a5ef5ed035a7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Rhubarb/zipball/7bc74c81af768cd4c2896bd936b4f0afa4c57ef0",
-                "reference": "7bc74c81af768cd4c2896bd936b4f0afa4c57ef0",
+                "url": "https://api.github.com/repos/RhubarbPHP/Rhubarb/zipball/30d5b5dd6da27abe58b827806d4a5ef5ed035a7e",
+                "reference": "30d5b5dd6da27abe58b827806d4a5ef5ed035a7e",
                 "shasum": ""
             },
             "require": {
@@ -964,36 +1051,36 @@
                 "framework",
                 "php"
             ],
-            "time": "2017-10-10 16:30:13"
+            "time": "2017-11-16T15:32:42+00:00"
         },
         {
             "name": "rhubarbphp/scaffold-authentication",
-            "version": "1.1.4",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Scaffold.Authentication.git",
-                "reference": "35acdc43697225a7c89c140e45524038269c1ee7"
+                "reference": "1274a1f235385fa57cbf48afa82f454092ae58e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Scaffold.Authentication/zipball/35acdc43697225a7c89c140e45524038269c1ee7",
-                "reference": "35acdc43697225a7c89c140e45524038269c1ee7",
+                "url": "https://api.github.com/repos/RhubarbPHP/Scaffold.Authentication/zipball/1274a1f235385fa57cbf48afa82f454092ae58e6",
+                "reference": "1274a1f235385fa57cbf48afa82f454092ae58e6",
                 "shasum": ""
             },
             "require": {
                 "rhubarbphp/module-leaf": "*",
                 "rhubarbphp/module-leaf-common-controls": "*",
-                "rhubarbphp/module-stem": "*",
-                "rhubarbphp/rhubarb": "*"
+                "rhubarbphp/module-stem": "^1.5.1",
+                "rhubarbphp/rhubarb": "^1.4.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.*"
+                "codeception/codeception": "^2.3"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Rhubarb\\Scaffolds\\Authentication\\": "src/",
-                    "Rhubarb\\Scaffolds\\Authentication\\Tests\\": "tests/"
+                    "Rhubarb\\Scaffolds\\Authentication\\Tests\\": "tests/unit/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1008,27 +1095,27 @@
                 "php",
                 "rhubarb"
             ],
-            "time": "2017-07-21 11:18:39"
+            "time": "2017-11-23T13:08:52+00:00"
         },
         {
             "name": "rhubarbphp/scaffold-authentication-with-roles",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RhubarbPHP/Scaffold.AuthenticationWithRoles.git",
-                "reference": "7e0a85b258b9c9c84ea99e0e57273b6c298df9c1"
+                "reference": "7402e741b67f1936dfbb3d3ae6e1f6193c226f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RhubarbPHP/Scaffold.AuthenticationWithRoles/zipball/7e0a85b258b9c9c84ea99e0e57273b6c298df9c1",
-                "reference": "7e0a85b258b9c9c84ea99e0e57273b6c298df9c1",
+                "url": "https://api.github.com/repos/RhubarbPHP/Scaffold.AuthenticationWithRoles/zipball/7402e741b67f1936dfbb3d3ae6e1f6193c226f9b",
+                "reference": "7402e741b67f1936dfbb3d3ae6e1f6193c226f9b",
                 "shasum": ""
             },
             "require": {
                 "rhubarbphp/custard": "^1.0",
                 "rhubarbphp/module-stem": "^1.2",
                 "rhubarbphp/rhubarb": "^1.1",
-                "rhubarbphp/scaffold-authentication": "^1.0"
+                "rhubarbphp/scaffold-authentication": ">0.99"
             },
             "require-dev": {
                 "codeception/codeception": "2.1.*"
@@ -1052,20 +1139,20 @@
                 "php",
                 "rhubarb"
             ],
-            "time": "2016-10-12 15:01:12"
+            "time": "2017-11-17T09:38:31+00:00"
         },
         {
             "name": "spomky-labs/otphp",
-            "version": "v9.0.2",
+            "version": "v9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/otphp.git",
-                "reference": "94f9fd53ce3b283ed56cf190e55b48cfd340fa3e"
+                "reference": "26d19c0baff675fb64193e22b777aa9be63b8deb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/94f9fd53ce3b283ed56cf190e55b48cfd340fa3e",
-                "reference": "94f9fd53ce3b283ed56cf190e55b48cfd340fa3e",
+                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/26d19c0baff675fb64193e22b777aa9be63b8deb",
+                "reference": "26d19c0baff675fb64193e22b777aa9be63b8deb",
                 "shasum": ""
             },
             "require": {
@@ -1113,20 +1200,20 @@
                 "otp",
                 "totp"
             ],
-            "time": "2017-07-24 10:25:54"
+            "time": "2017-11-23T08:44:21+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.10",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "116bc56e45a8e5572e51eb43ab58c769a352366c"
+                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/116bc56e45a8e5572e51eb43ab58c769a352366c",
-                "reference": "116bc56e45a8e5572e51eb43ab58c769a352366c",
+                "url": "https://api.github.com/repos/symfony/console/zipball/63cd7960a0a522c3537f6326706d7f3b8de65805",
+                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805",
                 "shasum": ""
             },
             "require": {
@@ -1181,20 +1268,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02 06:42:24"
+            "time": "2017-11-16T15:24:32+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.10",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd"
+                "reference": "74557880e2846b5c84029faa96b834da37e29810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd",
-                "reference": "eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/74557880e2846b5c84029faa96b834da37e29810",
+                "reference": "74557880e2846b5c84029faa96b834da37e29810",
                 "shasum": ""
             },
             "require": {
@@ -1237,20 +1324,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02 06:42:24"
+            "time": "2017-11-10T16:38:39+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
@@ -1262,7 +1349,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1296,7 +1383,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-14 15:44:48"
+            "time": "2017-10-11T12:05:26+00:00"
         }
     ],
     "packages-dev": [
@@ -1359,20 +1446,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-09-02 10:13:14"
+            "time": "2014-09-02T10:13:14+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.2",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5"
+                "reference": "3d478c5f9e8bb02b484a3fdc82693a460d7ee268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3d478c5f9e8bb02b484a3fdc82693a460d7ee268",
+                "reference": "3d478c5f9e8bb02b484a3fdc82693a460d7ee268",
                 "shasum": ""
             },
             "require": {
@@ -1406,7 +1493,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03 07:40:28"
+            "time": "2017-11-27T07:49:00+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1447,7 +1534,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -1496,7 +1583,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-02-26 11:10:40"
+            "time": "2017-02-26T11:10:40+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1546,7 +1633,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2014-03-03 05:10:30"
+            "time": "2014-03-03T05:10:30+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -1619,7 +1706,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-10-17 09:04:17"
+            "time": "2014-10-17T09:04:17+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1668,20 +1755,20 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2013-01-13 10:24:48"
+            "time": "2013-01-13T10:24:48+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.28",
+            "version": "v2.8.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e"
+                "reference": "d819bf267e901727141fe828ae888486fd21236e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/842fb6df22180244b4c65935ce1a88d324e5ff9e",
-                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/d819bf267e901727141fe828ae888486fd21236e",
+                "reference": "d819bf267e901727141fe828ae888486fd21236e",
                 "shasum": ""
             },
             "require": {
@@ -1717,7 +1804,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-05 14:38:30"
+            "time": "2017-11-05T15:25:56+00:00"
         }
     ],
     "aliases": [
@@ -1726,18 +1813,11 @@
             "alias_normalized": "1.0.0.0",
             "version": "9999999-dev",
             "package": "rhubarbphp/module-aws-sns-sms-provider"
-        },
-        {
-            "alias": "1.3.9",
-            "alias_normalized": "1.3.9.0",
-            "version": "dev-feature/SMSSendable",
-            "package": "rhubarbphp/rhubarb"
         }
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "rhubarbphp/module-aws-sns-sms-provider": 20,
-        "rhubarbphp/rhubarb": 20
+        "rhubarbphp/module-aws-sns-sms-provider": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
