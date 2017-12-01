@@ -23,11 +23,15 @@ class TwoFactorLogin extends Login
     protected function onModelCreated()
     {
         parent::onModelCreated();
-        $this->model->loginProvider = TwoFactorLoginProvider::class;
+        /** @var TwoFactorLoginProvider $loginProvider */
+        $loginProvider = $this->getLoginProvider();
+        $this->model->codeAttempted = $loginProvider->codeAttempted;
+        $this->model->verificationCode = $loginProvider->verificationCode;
+        $this->model->twoFactorVerified = $loginProvider->isTwoFactorVerified();
         $this->model->verifyCodeEvent = new Event();
         $this->model->verifyCodeEvent->attachHandler(function () {
-            /** @var TwoFactorLoginProvider $loginProviderClass */
-            $loginProvider = TwoFactorLoginProvider::singleton();
+            /** @var TwoFactorLoginProvider $loginProvider */
+            $loginProvider = $this->getLoginProvider();
             $loginProvider->validateCode($this->model->Code);
             $this->onSuccess();
         });
@@ -41,11 +45,10 @@ class TwoFactorLogin extends Login
 
     protected function onSuccess()
     {
-        /** @var TwoFactorLoginProvider $loginProviderClass */
-        $loginProviderClass = $this->loginProviderClassName;
-        $loginProvider = $loginProviderClass::singleton();
+        /** @var TwoFactorLoginProvider $loginProvider */
+        $loginProvider = $this->getLoginProvider();
         if (!$loginProvider->isTwoFactorVerified()) {
-            if(!$loginProvider->codeSent) {
+            if (!$loginProvider->codeSent) {
                 $loginProvider->createAndSendCode();
             }
             $this->model->promptForCode = true;
