@@ -12,7 +12,7 @@ class User extends \Rhubarb\Scaffolds\AuthenticationWithRoles\User
     protected function extendSchema(ModelSchema $schema)
     {
         $schema->addColumn(
-            new StringColumn('TFASecret', 100),
+            new StringColumn('TFASecret', 255),
             new StringColumn('MobileNumber', 50)
         );
 

@@ -19,6 +19,15 @@ class TwoFactorLoginProvider extends LoginProvider
     public $codeSent = false;
     public $codeAttempted = false;
 
+    public function __construct(
+        $modelClassName = "User",
+        $usernameColumnName = "Email",
+        $passwordColumnName = "Password",
+        $activeColumnName = "Enabled"
+    ) {
+        parent::__construct($modelClassName, $usernameColumnName, $passwordColumnName, $activeColumnName);
+    }
+
     public function isTwoFactorVerified(): bool
     {
         return $this->twoFactorVerified;
