@@ -8,7 +8,6 @@ class DatabaseSchema extends \Rhubarb\Scaffolds\AuthenticationWithRoles\Database
     {
         parent::__construct();
 
-        $this->addModel('User', User::class);
+        $this->addModel('User', User::class, 2);
     }
-
 }
