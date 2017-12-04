@@ -41,9 +41,7 @@ class TwoFactorLogin extends Login
 
     protected function onSuccess()
     {
-        /** @var TwoFactorLoginProvider $loginProviderClass */
-        $loginProviderClass = $this->loginProviderClassName;
-        $loginProvider = $loginProviderClass::singleton();
+        $loginProvider = $this->getLoginProvider();
         if (!$loginProvider->isTwoFactorVerified()) {
             if(!$loginProvider->codeSent) {
                 $loginProvider->createAndSendCode();
