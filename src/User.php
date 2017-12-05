@@ -29,4 +29,15 @@ class User extends \Rhubarb\Scaffolds\AuthenticationWithRoles\User
 
         parent::beforeSave();
     }
+
+    protected function getConsistencyValidationErrors()
+    {
+        $errors = parent::getConsistencyValidationErrors();
+
+        if (!$this->MobileNumber) {
+            $errors['MobileNumber'] = 'Mobile Number is required';
+        }
+
+        return $errors;
+    }
 }
