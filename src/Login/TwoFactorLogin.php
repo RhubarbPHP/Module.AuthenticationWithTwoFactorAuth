@@ -35,6 +35,12 @@ class TwoFactorLogin extends Login
             $loginProvider->validateCode($this->model->Code);
             $this->onSuccess();
         });
+        $this->model->resendCodeEvent = new Event();
+        $this->model->resendCodeEvent->attachHandler(function() {
+            /** @var TwoFactorLoginProvider $loginProvider */
+            $loginProvider = $this->getLoginProvider();
+            $loginProvider->createAndSendCode();
+        });
     }
 
 

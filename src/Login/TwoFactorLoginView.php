@@ -23,10 +23,14 @@ class TwoFactorLoginView extends LoginView
             $code = new TextBox('Code'),
             new Button('Confirm', 'Confirm', function () {
                 $this->model->verifyCodeEvent->raise();
+            }),
+            $resend = new Button('Resend', 'Resend code', function () {
+                $this->model->resendCodeEvent->raise();
             })
         );
 
         $code->addHtmlAttribute('autofocus', 'autofocus');
+        $resend->addCssClassNames('u-red u-milli');
     }
 
     final public function printViewContent()
@@ -57,6 +61,9 @@ class TwoFactorLoginView extends LoginView
 
             <div class="c-form__actions">
                 <?= $this->leaves['Confirm']; ?>
+                <p class="u-micro u-marg-top u-align-center">
+                    <span class="u-lighten">Didn't get a code? <?= $this->leaves['Resend'] ?></span>
+                </p>
             </div>
         </fieldset>
 

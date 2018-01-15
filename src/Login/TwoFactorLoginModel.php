@@ -14,4 +14,6 @@ class TwoFactorLoginModel extends LoginModel
     public $twoFactorVerified;
     public $verificationCode;
     public $promptForCode;
+    /** @var Event */
+    public $resendCodeEvent;
 }
