@@ -30,7 +30,7 @@ class TwoFactorLoginView extends LoginView
         );
 
         $code->addHtmlAttribute('autofocus', 'autofocus');
-        $resend->addCssClassNames('u-red u-milli');
+        $resend->addCssClassNames('u-red', 'u-micro', 'u-link');
     }
 
     final public function printViewContent()
