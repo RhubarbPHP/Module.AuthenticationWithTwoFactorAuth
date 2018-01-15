@@ -38,7 +38,7 @@ class TwoFactorLoginView extends LoginView
         }
     }
 
-    private function printTwoFactorContent()
+    public function printTwoFactorContent()
     {
         if ($this->model->codeAttempted && !$this->model->twoFactorVerified) {
             print '<div class="c-alert c-alert--error">Sorry, this code does not match the one we sent you, please check and try again.</div>';
