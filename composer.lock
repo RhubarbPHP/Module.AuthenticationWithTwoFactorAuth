@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3d153b8cf2ff1ed034c8726ab95f0b1",
+    "content-hash": "8d4b8d0008666adc74a0ca88ff50597f",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1809,10 +1809,10 @@
     ],
     "aliases": [
         {
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0",
+            "package": "rhubarbphp/module-aws-sns-sms-provider",
             "version": "9999999-dev",
-            "package": "rhubarbphp/module-aws-sns-sms-provider"
+            "alias": "1.0",
+            "alias_normalized": "1.0.0.0"
         }
     ],
     "minimum-stability": "stable",
@@ -1822,7 +1822,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0"
+        "php": "^8.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
