@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d4b8d0008666adc74a0ca88ff50597f",
+    "content-hash": "199e00765ed01534c6770f8eb5fbd99d",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -88,34 +88,42 @@
         },
         {
             "name": "beberlei/assert",
-            "version": "v2.7.11",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/assert.git",
-                "reference": "53991547d6f0b8c81354fb2d098dcb71e81678cb"
+                "reference": "cb70015c04be1baee6f5f5c953703347c0ac1655"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/53991547d6f0b8c81354fb2d098dcb71e81678cb",
-                "reference": "53991547d6f0b8c81354fb2d098dcb71e81678cb",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/cb70015c04be1baee6f5f5c953703347c0ac1655",
+                "reference": "cb70015c04be1baee6f5f5c953703347c0ac1655",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": ">=5.3"
+                "ext-simplexml": "*",
+                "php": "^7.0 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.1.1",
-                "phpunit/phpunit": "^4.8.35|^5.7"
+                "friendsofphp/php-cs-fixer": "*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": ">=6.0.0",
+                "yoast/phpunit-polyfills": "^0.1.0"
+            },
+            "suggest": {
+                "ext-intl": "Needed to allow Assertion::count(), Assertion::isCountable(), Assertion::minCount(), and Assertion::maxCount() to operate on ResourceBundles"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Assert\\": "lib/Assert"
-                },
                 "files": [
                     "lib/Assert/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -139,7 +147,11 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-11-13T18:35:09+00:00"
+            "support": {
+                "issues": "https://github.com/beberlei/assert/issues",
+                "source": "https://github.com/beberlei/assert/tree/v3.3.2"
+            },
+            "time": "2021-12-16T21:41:27+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -452,24 +464,24 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.2.0",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "9e7d88e6e4015c2f06a3fa22f06e1d5faa77e6c4"
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/9e7d88e6e4015c2f06a3fa22f06e1d5faa77e6c4",
-                "reference": "9e7d88e6e4015c2f06a3fa22f06e1d5faa77e6c4",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/58c3f47f650c94ec05a151692652a868995d2938",
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": "^7|^8"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6",
-                "vimeo/psalm": "^0.3|^1"
+                "phpunit/phpunit": "^6|^7|^8|^9",
+                "vimeo/psalm": "^1|^2|^3|^4"
             },
             "type": "library",
             "autoload": {
@@ -510,7 +522,12 @@
                 "hex2bin",
                 "rfc4648"
             ],
-            "time": "2017-09-22T14:55:37+00:00"
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/constant_time_encoding/issues",
+                "source": "https://github.com/paragonie/constant_time_encoding"
+            },
+            "time": "2022-06-14T06:56:20+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1143,33 +1160,40 @@
         },
         {
             "name": "spomky-labs/otphp",
-            "version": "v9.0.3",
+            "version": "v11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/otphp.git",
-                "reference": "26d19c0baff675fb64193e22b777aa9be63b8deb"
+                "reference": "7d32a0a199a5d4b3aa80c644c331721945f5894f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/26d19c0baff675fb64193e22b777aa9be63b8deb",
-                "reference": "26d19c0baff675fb64193e22b777aa9be63b8deb",
+                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/7d32a0a199a5d4b3aa80c644c331721945f5894f",
+                "reference": "7d32a0a199a5d4b3aa80c644c331721945f5894f",
                 "shasum": ""
             },
             "require": {
-                "beberlei/assert": "^2.4",
+                "beberlei/assert": "^3.0",
+                "ext-mbstring": "*",
                 "paragonie/constant_time_encoding": "^2.0",
-                "php": "^7.1"
+                "php": "^8.1",
+                "thecodingmachine/safe": "^1.0|^2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.0",
-                "satooshi/php-coveralls": "^1.0"
+                "ekino/phpstan-banned-code": "^1.0",
+                "infection/infection": "^0.26",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-beberlei-assert": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.13",
+                "symfony/phpunit-bridge": "^6.0",
+                "symplify/easy-coding-standard": "^11.0",
+                "thecodingmachine/phpstan-safe-rule": "^1.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "9.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "OTPHP\\": "src/"
@@ -1200,7 +1224,11 @@
                 "otp",
                 "totp"
             ],
-            "time": "2017-11-23T08:44:21+00:00"
+            "support": {
+                "issues": "https://github.com/Spomky-Labs/otphp/issues",
+                "source": "https://github.com/Spomky-Labs/otphp/tree/v11.0.0"
+            },
+            "time": "2022-06-24T14:15:03+00:00"
         },
         {
             "name": "symfony/console",
@@ -1384,6 +1412,145 @@
                 "shim"
             ],
             "time": "2017-10-11T12:05:26+00:00"
+        },
+        {
+            "name": "thecodingmachine/safe",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/safe.git",
+                "reference": "3115ecd6b4391662b4931daac4eba6b07a2ac1f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/3115ecd6b4391662b4931daac4eba6b07a2ac1f0",
+                "reference": "3115ecd6b4391662b4931daac4eba6b07a2ac1f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.5",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.2",
+                "thecodingmachine/phpstan-strict-rules": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "deprecated/apc.php",
+                    "deprecated/array.php",
+                    "deprecated/datetime.php",
+                    "deprecated/libevent.php",
+                    "deprecated/misc.php",
+                    "deprecated/password.php",
+                    "deprecated/mssql.php",
+                    "deprecated/stats.php",
+                    "deprecated/strings.php",
+                    "lib/special_cases.php",
+                    "deprecated/mysqli.php",
+                    "generated/apache.php",
+                    "generated/apcu.php",
+                    "generated/array.php",
+                    "generated/bzip2.php",
+                    "generated/calendar.php",
+                    "generated/classobj.php",
+                    "generated/com.php",
+                    "generated/cubrid.php",
+                    "generated/curl.php",
+                    "generated/datetime.php",
+                    "generated/dir.php",
+                    "generated/eio.php",
+                    "generated/errorfunc.php",
+                    "generated/exec.php",
+                    "generated/fileinfo.php",
+                    "generated/filesystem.php",
+                    "generated/filter.php",
+                    "generated/fpm.php",
+                    "generated/ftp.php",
+                    "generated/funchand.php",
+                    "generated/gettext.php",
+                    "generated/gmp.php",
+                    "generated/gnupg.php",
+                    "generated/hash.php",
+                    "generated/ibase.php",
+                    "generated/ibmDb2.php",
+                    "generated/iconv.php",
+                    "generated/image.php",
+                    "generated/imap.php",
+                    "generated/info.php",
+                    "generated/inotify.php",
+                    "generated/json.php",
+                    "generated/ldap.php",
+                    "generated/libxml.php",
+                    "generated/lzf.php",
+                    "generated/mailparse.php",
+                    "generated/mbstring.php",
+                    "generated/misc.php",
+                    "generated/mysql.php",
+                    "generated/network.php",
+                    "generated/oci8.php",
+                    "generated/opcache.php",
+                    "generated/openssl.php",
+                    "generated/outcontrol.php",
+                    "generated/pcntl.php",
+                    "generated/pcre.php",
+                    "generated/pgsql.php",
+                    "generated/posix.php",
+                    "generated/ps.php",
+                    "generated/pspell.php",
+                    "generated/readline.php",
+                    "generated/rpminfo.php",
+                    "generated/rrd.php",
+                    "generated/sem.php",
+                    "generated/session.php",
+                    "generated/shmop.php",
+                    "generated/sockets.php",
+                    "generated/sodium.php",
+                    "generated/solr.php",
+                    "generated/spl.php",
+                    "generated/sqlsrv.php",
+                    "generated/ssdeep.php",
+                    "generated/ssh2.php",
+                    "generated/stream.php",
+                    "generated/strings.php",
+                    "generated/swoole.php",
+                    "generated/uodbc.php",
+                    "generated/uopz.php",
+                    "generated/url.php",
+                    "generated/var.php",
+                    "generated/xdiff.php",
+                    "generated/xml.php",
+                    "generated/xmlrpc.php",
+                    "generated/yaml.php",
+                    "generated/yaz.php",
+                    "generated/zip.php",
+                    "generated/zlib.php"
+                ],
+                "classmap": [
+                    "lib/DateTime.php",
+                    "lib/DateTimeImmutable.php",
+                    "lib/Exceptions/",
+                    "deprecated/Exceptions/",
+                    "generated/Exceptions/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
+            "support": {
+                "issues": "https://github.com/thecodingmachine/safe/issues",
+                "source": "https://github.com/thecodingmachine/safe/tree/v2.5.0"
+            },
+            "time": "2023-04-05T11:54:14+00:00"
         }
     ],
     "packages-dev": [
